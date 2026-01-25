@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3d73437bb4bfb4c816f641c1f7afad, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  zPlane: 0
+  xSpawnRange: 0.3
+  baseDownSpeed: 2.5
+  digBoostSpeed: 4
+  spawnAheadDistance: 14
+  despawnBehindDistance: 18
+  baseSpawnInterval: 0.7
+  minSpawnInterval: 0.3
+  bombChanceAtStart: 0.25
+  bombChanceAtDeep: 0.55
+  depthForMaxDifficulty: 250
+  bombTimerStart: 3
+  bombTimerMin: 1.2
+  dragMaxDistanceWorld: 2
+  throwPower: 12
+  upwardBias: 0.35
+  exitEveryDepth: 60
+  exitSpawnOffset: 10
+  explosionRadius: 1.8
+  segmentHeight: 8
+  segmentsAhead: 3
+  segmentsBehind: 2
+  diamondVerticalOffset: 3
+  interactSpacing: 6
+  firstInteractOffset: 4
+  wallSegmentHeight: 50
+  wallLeftX: -2.5
+  wallRightX: 2.5
+  wallSegmentsAhead: 2
+  wallSegmentsBehind: 1
+  wallSpawnStartDepth: 40
+  wallCleanupExtra: 2
