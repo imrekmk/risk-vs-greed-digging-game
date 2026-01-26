@@ -3,7 +3,7 @@ using TMPro;
 
 public class Bomb : MonoBehaviour
 {
-    public TextMeshPro timerText;
+    public TextMeshProUGUI timerText;
 
     private Rigidbody rb;
     private GameConfig cfg;
@@ -31,6 +31,8 @@ public class Bomb : MonoBehaviour
 
         if (timerText != null)
             timerText.text = "";
+
+
     }
 
     private void Update()

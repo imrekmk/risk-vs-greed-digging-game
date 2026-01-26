@@ -110,9 +110,6 @@ public class BombGrabThrow : MonoBehaviour
         if (digController != null)
             digController.enabled = false;
 
-        // Start bomb timer
-        bomb.StartTimer();
-
         // Freeze bomb + snap to hand
         heldRb.isKinematic = true;
         heldRb.useGravity = false;

@@ -5,7 +5,9 @@ public class Spawner : MonoBehaviour
     public GameConfig config;
     public Transform player;
 
-    public GameObject diamondPrefab;
+    [Header("Diamond Variants")]
+    public GameObject[] diamondPrefabs;
+
     public GameObject bombPrefab;
     public GameObject exitPrefab;
 
@@ -58,9 +60,21 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            // Spawn a diamond slightly higher so it's not buried
             pos.y += config.diamondVerticalOffset;
-            Instantiate(diamondPrefab, pos, Quaternion.identity);
+
+            // Safety check
+            if (diamondPrefabs == null || diamondPrefabs.Length == 0)
+            {
+                Debug.LogWarning("No diamond prefabs assigned!");
+                return;
+            }
+
+            // Pick random diamond
+            int index = Random.Range(0, diamondPrefabs.Length);
+            GameObject chosenDiamond = diamondPrefabs[index];
+
+            Instantiate(chosenDiamond, pos, Quaternion.identity);
+
         }
     }
 

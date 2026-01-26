@@ -105,18 +105,33 @@ public class PlayerDigController : MonoBehaviour
 
     private bool IsInteractableAhead()
     {
-        // Look a bit below the player in a small radius
         Vector3 checkCenter = transform.position + Vector3.down * interactCheckDistance;
 
         Collider[] hits = Physics.OverlapSphere(checkCenter, interactCheckRadius);
         foreach (var h in hits)
         {
             if (h == null) continue;
-            if (h.CompareTag("Bomb") || h.CompareTag("Diamond"))
-                return true;
+
+            // Bomb found → start timer NOW (when player is stopped)
+            if (h.CompareTag("Bomb"))
+            {
+                Bomb bomb = h.GetComponent<Bomb>();
+                if (bomb != null)
+                    bomb.StartTimer();
+
+                return true; // stop digging
+            }
+
+            // Diamond found → just stop digging (no timer)
+            if (h.CompareTag("Diamond"))
+            {
+                return true; // stop digging
+            }
         }
+
         return false;
     }
+
 
     public bool IsHolding() => holding;
 }

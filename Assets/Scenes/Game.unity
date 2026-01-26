@@ -1258,7 +1258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   config: {fileID: 11400000, guid: 0e3de25e4b929974cb0c9d69060e4113, type: 2}
   player: {fileID: 1257380380}
-  diamondPrefab: {fileID: 5918244018438974031, guid: acb5de2f4ab530b4881c6454552fc917, type: 3}
+  diamondPrefabs:
+  - {fileID: 4560012245584741798, guid: 9438b3ae0660d404dbf55ad3041dd07a, type: 3}
+  - {fileID: 746327149004395937, guid: 931266fd86d4ab047828653481939190, type: 3}
   bombPrefab: {fileID: 515433396865658134, guid: 74f5cb89eb1c78647b3ecbd0d1e3b1db, type: 3}
   exitPrefab: {fileID: 5964107137383307282, guid: 0c8659f4d3474014e9d79b2cb287a3c4, type: 3}
 --- !u!1 &506079086
